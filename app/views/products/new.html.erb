@@ -1,0 +1,14 @@
+<h2>商品登録</h2>
+<%= form_with model: @product do |f| %>
+  <div>
+    <%= f.label :name, "商品名" %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :price, "価格" %><br>
+    <%= f.number_field :price %>
+  </div>
+  <%= f.submit "登録" %>
+<% end %>
+
+<%= link_to "商品一覧へ戻る", products_path %>
